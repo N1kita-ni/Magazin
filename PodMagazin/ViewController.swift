@@ -45,13 +45,24 @@ class ViewController: UIViewController {
     @IBAction func buttonSaleProducts(_ sender: Any) {
         labelOfProducts.text = "\(magazin.sell())"
         if magazin.assortiment.isEmpty {
-          labelOfMessage.text = "Вы продали все товары в магазине"
-//            _ = UIAlertController(title: "Товары проданы",
-//                                          message: nil,
-//                                          preferredStyle: .alert)
-//            _ = UIAlertAction(title: "OK",
-//                                   style: .cancel,
-//                                   handler: nil)
+          let alert = UIAlertController(title: "Magazin is empty",
+                                        message: "All item sell", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Add from storage",
+                                   style: .default) { (ok) in
+                                    if magazin.storageAssortiment.isEmpty{
+                                        let alertFromStrorage = UIAlertController(title: "ERROR", message: "Storage is empty", preferredStyle: .alert)
+                                        let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                                        alertFromStrorage.addAction(ok)
+                                        self.present(alertFromStrorage, animated: true, completion: nil)
+                                    } else {
+                                    self.labelOfProducts.text = "\(magazin.updateProductFromStorage())"
+            }
+            }
+            let cancel = UIAlertAction(title: "Cancel",
+                                       style: .cancel, handler: nil)
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            present(alert, animated: true, completion: nil)
             }
         }
     func updateLabel() {
