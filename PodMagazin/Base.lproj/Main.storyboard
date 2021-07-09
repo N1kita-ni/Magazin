@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ega-6C-oNP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Cdu-Pc-ndc">
+            <objects>
+                <navigationController id="ega-6C-oNP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="qHr-bx-yQJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.023381594860176769" blue="0.0005959904897091528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lp6-Zj-eAw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGZ-1i-U52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="133"/>
+        </scene>
+        <!--SigaretNet-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PodMagazin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWe-Oc-VUH">
+                                <rect key="frame" x="92" y="238.5" width="191" height="30"/>
+                                <state key="normal" title="Добавить товары на склад">
+                                    <color key="titleColor" red="0.2040092986" green="0.48211211279999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ENm-Ka-kso" kind="show" identifier="add" id="sYH-DD-h6s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5q-nZ-Zqq">
+                                <rect key="frame" x="16" y="349" width="83" height="30"/>
+                                <state key="normal" title="Устройства"/>
+                                <connections>
+                                    <action selector="buttonOfProducts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVY-XJ-22b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cH-me-B8Y">
+                                <rect key="frame" x="298" y="349" width="61" height="30"/>
+                                <state key="normal" title="Продать"/>
+                                <connections>
+                                    <action selector="buttonSaleProducts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x8-7i-gJ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-7U-fWi">
+                                <rect key="frame" x="16" y="411" width="153" height="30"/>
+                                <state key="normal" title="Дополнить со склада"/>
+                                <connections>
+                                    <action selector="buttonAddFromStorage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogY-kR-3rI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSs-bY-OXk">
+                                <rect key="frame" x="20" y="39" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-LZ-pwb">
+                                <rect key="frame" x="20" y="72.5" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huW-0o-fbm">
+                                <rect key="frame" x="177" y="411" width="198" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="CMo-6u-VJv"/>
+                                    <constraint firstAttribute="width" constant="198" id="g73-v1-JYY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzJ-A2-ANi">
+                                <rect key="frame" x="93" y="292" width="189" height="30"/>
+                                <state key="normal" title="Добавить товар со склада"/>
+                                <connections>
+                                    <action selector="buttonMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGL-sK-FI3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uM-fg-vRC">
+                                <rect key="frame" x="165" y="349" width="45" height="30"/>
+                                <state key="normal" title="Полки"/>
+                                <connections>
+                                    <segue destination="e4s-S0-RBJ" kind="show" id="rvX-Xw-cmD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-hd-puI">
+                                <rect key="frame" x="6" y="465" width="173" height="30"/>
+                                <state key="normal" title="Добавить товар с полки"/>
+                                <connections>
+                                    <action selector="buttonShelfMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cQ-UQ-tBw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tSs-bY-OXk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Xy-QF-7uc"/>
+                            <constraint firstItem="0Do-LZ-pwb" firstAttribute="top" secondItem="tSs-bY-OXk" secondAttribute="bottom" constant="33.5" id="16y-Ia-ra8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5cH-me-B8Y" secondAttribute="bottom" constant="128" id="54P-Iv-YXq"/>
+                            <constraint firstItem="4uM-fg-vRC" firstAttribute="top" secondItem="WzJ-A2-ANi" secondAttribute="bottom" constant="27" id="8eV-sa-QfU"/>
+                            <constraint firstItem="4uM-fg-vRC" firstAttribute="leading" secondItem="S5q-nZ-Zqq" secondAttribute="trailing" constant="66" id="BG3-HP-zbH"/>
+                            <constraint firstItem="LXF-hd-puI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="CZH-pU-vqL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ebm-7U-fWi" secondAttribute="bottom" constant="66" id="Fyv-Ww-BKc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="huW-0o-fbm" secondAttribute="bottom" id="Pcj-9X-zTh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tSs-bY-OXk" secondAttribute="trailing" constant="20" id="TSB-uU-cFO"/>
+                            <constraint firstItem="LXF-hd-puI" firstAttribute="top" secondItem="ebm-7U-fWi" secondAttribute="bottom" constant="24" id="Ytc-qa-y4S"/>
+                            <constraint firstItem="ebm-7U-fWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a0t-PP-CpT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5cH-me-B8Y" secondAttribute="trailing" constant="16" id="dkP-TM-UpE"/>
+                            <constraint firstItem="0Do-LZ-pwb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gne-TQ-nl9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LXF-hd-puI" secondAttribute="trailing" constant="196" id="h6g-Ql-zTt"/>
+                            <constraint firstItem="wWe-Oc-VUH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="haC-0g-UX4"/>
+                            <constraint firstItem="wWe-Oc-VUH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jb0-Kg-XBC"/>
+                            <constraint firstItem="S5q-nZ-Zqq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ng8-0I-ubR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Do-LZ-pwb" secondAttribute="trailing" constant="20" id="nyp-vR-VOV"/>
+                            <constraint firstItem="WzJ-A2-ANi" firstAttribute="top" secondItem="wWe-Oc-VUH" secondAttribute="bottom" constant="23.5" id="q7J-mr-J6C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="huW-0o-fbm" secondAttribute="trailing" id="qIg-D2-iwL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S5q-nZ-Zqq" secondAttribute="bottom" constant="128" id="t7E-6H-aNv"/>
+                            <constraint firstItem="WzJ-A2-ANi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="uhQ-O9-0pS"/>
+                            <constraint firstItem="tSs-bY-OXk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="yJJ-T6-B0h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="SigaretNet" id="3Ed-O9-zzx"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageSigaretNet" destination="huW-0o-fbm" id="ybO-GQ-I8U"/>
+                        <outlet property="labelOfMessage" destination="0Do-LZ-pwb" id="CRL-9f-6Z8"/>
+                        <outlet property="labelOfProducts" destination="tSs-bY-OXk" id="t6p-tS-zdx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Полки-->
+        <scene sceneID="XEi-PR-vY3">
+            <objects>
+                <viewController title="Полки" id="e4s-S0-RBJ" customClass="ShelfViewController" customModule="PodMagazin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fgf-3B-Pzx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-es-LGC">
+                                <rect key="frame" x="20" y="50" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="036-5y-pfK">
+                                <rect key="frame" x="100" y="239" width="177" height="30"/>
+                                <state key="normal" title="Добавить товар с полки "/>
+                                <connections>
+                                    <action selector="buttonAddFromShelf:" destination="e4s-S0-RBJ" eventType="touchUpInside" id="I5k-Wd-fIX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WT1-db-qsb" firstAttribute="trailing" secondItem="ASJ-es-LGC" secondAttribute="trailing" constant="20" id="0or-tl-WtN"/>
+                            <constraint firstItem="ASJ-es-LGC" firstAttribute="top" secondItem="WT1-db-qsb" secondAttribute="top" constant="50" id="9M0-iI-thN"/>
+                            <constraint firstItem="ASJ-es-LGC" firstAttribute="leading" secondItem="WT1-db-qsb" secondAttribute="leading" constant="20" id="aKn-ZU-pqs"/>
+                            <constraint firstItem="036-5y-pfK" firstAttribute="leading" secondItem="WT1-db-qsb" secondAttribute="leading" constant="100" id="lai-oz-Qy2"/>
+                            <constraint firstItem="036-5y-pfK" firstAttribute="top" secondItem="ASJ-es-LGC" secondAttribute="bottom" constant="159" id="s5g-pv-t13"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WT1-db-qsb"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="ASJ-es-LGC" id="wlz-hd-YwU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3n-L6-CEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="922"/>
+        </scene>
+        <!--Storage-->
+        <scene sceneID="lr3-0L-Tz8">
+            <objects>
+                <viewController id="ENm-Ka-kso" customClass="StorageViewController" customModule="PodMagazin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XL8-Ol-kOY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6n-Al-avE">
+                                <rect key="frame" x="20" y="31" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAh-2V-Jb6">
+                                <rect key="frame" x="20" y="441" width="180" height="30"/>
+                                <state key="normal" title="Добавить товар на склад"/>
+                                <connections>
+                                    <action selector="buttonToAddStorage:" destination="ENm-Ka-kso" eventType="touchUpInside" id="iGe-qs-qej"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98i-Gg-ihQ">
+                                <rect key="frame" x="20" y="134" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Slu-ra-gF2" firstAttribute="bottom" secondItem="vAh-2V-Jb6" secondAttribute="bottom" constant="36" id="0bo-wq-klT"/>
+                            <constraint firstItem="h6n-Al-avE" firstAttribute="leading" secondItem="Slu-ra-gF2" secondAttribute="leading" constant="20" id="2hr-2g-wTz"/>
+                            <constraint firstItem="Slu-ra-gF2" firstAttribute="trailing" secondItem="98i-Gg-ihQ" secondAttribute="trailing" constant="20" id="41e-w0-PPr"/>
+                            <constraint firstItem="vAh-2V-Jb6" firstAttribute="leading" secondItem="Slu-ra-gF2" secondAttribute="leading" constant="20" id="6eC-oR-0Yh"/>
+                            <constraint firstItem="98i-Gg-ihQ" firstAttribute="leading" secondItem="Slu-ra-gF2" secondAttribute="leading" constant="20" id="XQT-r7-rJK"/>
+                            <constraint firstItem="h6n-Al-avE" firstAttribute="top" secondItem="Slu-ra-gF2" secondAttribute="top" constant="31" id="is8-n3-fJe"/>
+                            <constraint firstItem="Slu-ra-gF2" firstAttribute="trailing" secondItem="h6n-Al-avE" secondAttribute="trailing" constant="20" id="rtq-dy-6UQ"/>
+                            <constraint firstItem="98i-Gg-ihQ" firstAttribute="top" secondItem="h6n-Al-avE" secondAttribute="bottom" constant="82.5" id="sf6-4q-z4q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Slu-ra-gF2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Storage" id="Y0y-HC-rTr"/>
+                    <connections>
+                        <outlet property="itemToAddTextField" destination="98i-Gg-ihQ" id="Iyi-UC-ejY"/>
+                        <outlet property="labelOfStorage" destination="h6n-Al-avE" id="fOA-9e-ABt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sJ-8C-bje" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
