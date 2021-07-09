@@ -29,6 +29,11 @@ class Magazin: NSObject {
         return description
     }
     
+    func sellTwo() {
+        sell()
+        sell()
+    }
+    
     private func addFromStorage() {
         assortiment.append(storageAssortiment[0])
         storageAssortiment.remove(at: 0)
